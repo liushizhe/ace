@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ace admin 使用</title>
+    <style>
+        /*#stockGraph { border: 1px solid black; }*/
+    </style>
+     <link href="./css/bootstrap.min.css" rel="stylesheet" />
+	 <link href="./css/fontawesome.min.css" rel="stylesheet" />
+	 <!-- only if needed -->
+
+	 <link href="./css/ace-fonts.min.css" rel="stylesheet" /><!-- you can also use google hosted fonts -->
+
+	 <link href="./css/ace.min.css" rel="stylesheet" class="ace-main-stylesheet" />
+	 <!--[if lte IE 9]>
+	  <link href="path/to/ace-part2.min.css" rel="stylesheet" class="ace-main-stylesheet" />
+	 <![endif]-->
+
+	 <link href="./css/ace-skins.min.css" rel="stylesheet" /><!-- only if needed -->
+	 <link href="./css/ace-rtl.min.css" rel="stylesheet" /><!-- only if needed -->
+	 <link rel="stylesheet" type="text/css" href="./multiselect/bootstrap-multiselect.css">
+	 <link rel="stylesheet" type="text/css" href="./gritter/jquery.gritter.css">
+	 <link rel="stylesheet" type="text/css" href="./jGritter/jGritter.css">
+	 <script src="./js/jquery-1.12.0.js"></script>
+	 <script>
+		 $( document ).ready(function() {
+	        console.log( "document loaded" );
+	    });
+	 
+	    $( window ).on( "load", function() {
+	        console.log( "window loaded" );
+	    });
+    </script>
+</head>
+
+<body>
+	<!-- <iframe src="http://techcrunch.com"></iframe> -->
+	<div class="breadcrumbs" id="breadcrumbs">
+	    <ul class="breadcrumb">
+	        <li>
+	            <i class="ace-icon fa fa-home home-icon"></i>
+	            <a href="#">DataExa Insight</a>
+	        </li>
+            <li>
+                <a href="#">项目管理</a>
+            </li>
+            <li class="active" id="btnss">编辑流程</li>
+	    </ul>
+	</div>
+	<div class="page-content">
+		<div class="row">
+			<div class="col-md-4">
+				1
+			</div>
+			<div class="col-md-4">
+				2
+			</div>
+			<div class="col-md-4">
+				3
+			</div>
+		</div>
+		<!-- <div class="row">
+			<h3 class="header smaller lighter blue">Button Groups</h3>
+			<p></p>
+			<div class="btn-group">
+				<button type="button" class="btn">1</button>
+				<button type="button" class="btn">2</button>
+				<button type="button" class="btn">3</button>
+			</div>
+		</div>
+		<div class="row">
+			<p class="text">ABCD1234</p>
+		</div>
+		<div class="row">
+			<select class="multiselect" multiple></select>  
+		</div> -->
+		<!-- <div class="jGritter jGritter-success">
+			<div class="close">x</div>
+			<div class="title">
+				<p>
+					title
+				</p>
+			</div>
+			<div class="content">
+				<p>
+					content
+				</p>
+			</div>
+		</div> -->
+	</div>
+
+	<!-- <script src="./js/jquery-1.12.0.js"></script> -->
+	<script src="./multiselect/bootstrap-multiselect.js"></script>
+	<script src="./gritter/jquery.gritter.js"></script>
+	<script src="./jGritter/jGritter.js"></script>
+	<script src="./js/ace-elements.min.js"></script>
+	<script src="./js/ace.min.js"></script>
+</body>
+
+<script type="text/javascript">
+	// (function($){
+	// 	$.fn.extend({         
+	//          changeStyle:function(option){             
+	// 	         var defaultSetting = { colorStr:"green",fontSize:12};
+	// 	         var setting = $.extend(defaultSetting,option);
+	// 	         this.css({
+	// 	         	"color": setting.colorStr,
+	// 	         	"fontSize": setting.fontSize+"px"
+	// 	         });        
+	// 	         return this; 
+	//           }
+	//      });
+	// }(jQuery));
+	// $('.text').changeStyle({
+	// 	colorStr: 'red',
+	// 	fontSize: 32
+	// });
+
+	// //multiselect初始化  
+	// var set = {  
+	//     enableFiltering: true,//搜索  
+	//     nableHTML: true,
+ //        buttonClass: 'btn btn-white btn-primary',		
+	//     // includeSelectAllOption: true,//全选  
+	//     nonSelectedText: '全部',//没有值的时候button显示值  
+	//     nSelectedText: '个被选中',//有n个值的时候显示n个被选中  
+	//     allSelectedText: '全选',//所有被选中的时候 全选（n）  
+	//     buttonWidth: '220px',//button宽度  
+	//     numberDisplayed: 4,//当超过1000个标签的时候显示n个被选中  
+	//     // selectAllText: '全选',  
+	//     templates: {  
+	//         button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> &nbsp;<b class="fa fa-caret-down"></b></button>',
+ //            ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+ //            filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+ //            filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
+ //            li: '<li style="padding-top: 0.3px;"><a tabindex="0"><label></label></a></li>',
+ //            divider: '<li class="multiselect-item divider"></li>',
+ //            liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>' 
+	//     },
+	//     onDropdownHide: function (event) {
+
+	//     }  
+	// };  
+	// $eventSelect = $('.multiselect').multiselect(set); 
+	// var options = [{
+	// 	value: '1', 
+	// 	selected: true
+	// },{
+	// 	value: '2', 
+	// 	selected: true
+	// },{
+	// 	value: '3', 
+	// 	selected: true
+	// }] 
+	// $eventSelect.multiselect('dataprovider', options);
+
+	// $.gritter.add({
+ //        time: 1000,
+ //        title: '成功!',
+ //        text:   'message',
+ //        class_name: 'gritter-success'
+ //    });
+ 	$.jGritter.add({
+        time: 1000,
+        title: '成功!',
+        text:   '<i class="ace-icon fa fa-info-circle"></i>' + 'message',
+        class_name: 'jGritter-error'
+    });    
+</script>
+
+</html>
